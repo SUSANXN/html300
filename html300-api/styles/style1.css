@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin-top: 0px;
+}
+
+div {
+    background-color: lightblue;
+    width: 200px;
+    padding: 25px;
+    border: 25px solid navy;
+}

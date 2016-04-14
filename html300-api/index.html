@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+<title>Week 1 Assignment</title>
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<style>
+  div primaryContent{
+    background-color: lightgray;
+    width: 200px;
+    padding: 25px;
+    border: 25px;
+  }
+  
+  ul { list-style-type: none;}
+  
+  nav {
+    float: left;
+    width: 200px;
+    border: 3px solid #73AD21;
+  
+  
+  </style>
+  
+  <script>
+function addNumbers()
+{
+    var firstNumber = parseFloat(document.getElementById("txtFirstNumber").value);
+    if (isNaN(firstNumber))
+    {
+        alert("Please enter a valid number in the first number textbox");
+        return;
+    }
+    var secondNumber = parseFloat(document.getElementById("txtSecondNumber").value);
+    if (isNaN(secondNumber))
+    {
+        alert("Please enter a valid number in the second number textbox");
+        return;
+    }
+    document.getElementById("txtResult").value = firstNumber + secondNumber;
+}
+
+</script>
+</head> 
+  
+<body class="page" id="top"> 
+	<header>
+		<h1>Week 1 Assignment</h1> 
+	</header>
+	
+  <div id="body"><p>Create a Web page with an input field where the user enters numbers.</p>
+<p>Each time the user enters a number, update the display to show how many numbers have been entered, the sum of the numbers, and the average of the numbers.</p>
+<p>There should be a Reset button that allows the user to start over with a new sequence of numbers.</p>
+<p>Your page should display an error message or otherwise prevent non-numeric input.</p>
+    <p>Optional features: display the standard deviation and/or median of the numbers entered.</p>
+  </div>  
+  
+	<div id="primaryContent">
+<form action="demo_form.asp" method="get">
+  
+First number:<input type="text" name="txtFirstNumber"><br>
+Last number:<input type="text" name="txtSecondNumber"><br>
+Result: <input type="text" name="txtResult"><br>  
+        
+<input type="button" value="Add" id="btnAdd" onclick="addNumbers()"/> 
+
+<button type="reset" id="btnAdd" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">Reset
+  </button>
+  
+</form>
+      
+First Number
+        <td><asp:TextBox ID="txtFirstNumber" runat="server"></asp:TextBox></td>
+    </tr>
+    <tr>
+        <td>Second Number</td>
+        <td><asp:TextBox ID="txtSecondNumber" runat="server"></asp:TextBox></td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td><asp:TextBox ID="txtResult" runat="server"></asp:TextBox></td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+          
+  
+      
+		
+	<footer>
+		<p>
+		&copy; Copyright  by Susan Nguyen
+		</p>
+
+  
+	</footer>
+		
+</body>
+</html>
