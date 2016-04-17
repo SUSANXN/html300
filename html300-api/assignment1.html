@@ -57,11 +57,12 @@ function addNumbers()
   </div>  
   
 	<div id="primaryContent">
-<form action="demo_form.asp" method="get">
+      
+<form>
   
-First number:<input type="text" name="txtFirstNumber"><br>
-Last number:<input type="text" name="txtSecondNumber"><br>
-Result: <input type="text" name="txtResult"><br>  
+First number:<input type="number" name="txtFirstNumber"><br>
+Last number:<input type="number" name="txtSecondNumber"><br>
+Result: <input type="number" name="txtResult"><br>  
         
 <input type="button" value="Add" id="btnAdd" onclick="addNumbers()"/> 
 
@@ -70,21 +71,7 @@ Result: <input type="text" name="txtResult"><br>
   
 </form>
       
-First Number
-        <td><asp:TextBox ID="txtFirstNumber" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Second Number</td>
-        <td><asp:TextBox ID="txtSecondNumber" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Result</td>
-        <td><asp:TextBox ID="txtResult" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>
-        </td>
-        <td>
+
           
   
       
