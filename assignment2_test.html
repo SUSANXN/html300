@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Week 2 Assignment</title>
+<script>
+function AddData() {
+    var x = document.getElementById("age").value;
+    var y = document.getElementById("name").value;
+    var letters = '/^[a-zA-Z]+$/';
+    if ((parseInt(x) != (x)) && (y == parseInt(y))) {
+        alert("Wrong Value Entered");
+    } else {
+        var rows = "";
+        var name = "sadcsad";
+        var gender = $('input[name="gender"]:checked').val();
+        var age = document.getElementById("age").value;
+        var city = document.getElementById("city").value;
+
+        rows += "<tr><td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city + "</td></tr>";
+        $(rows).appendTo("#list tbody");
+    }
+}
+</script>
+
+<body>
+<h2>Add/Update Person Form</h2>
+<div id = "data">
+    <form id = "person">    
+        <br><br>
+        Name: <input id = "name" name = "name" type = "text">
+        <br><br>
+        Gender: <input name = "gender" type = "radio" value = "Male"> Male
+                <input name = "gender" type = "radio" value = "Female"> Female
+        <br><br>
+        Age: &nbsp;&nbsp;&nbsp; <input id = "age" name = "age" type = "text">
+        <br><br>
+        City: &nbsp;&nbsp;&nbsp;<select id = "city" name = "city">
+                <option>Lahore</option>
+                <option>Islamabad</option>
+                <option>Karachi</option>
+            </select>
+        <br><br>
+        <input id = "button" type = "button" value = " Reset " onclick = "ResetForm()">&nbsp;&nbsp;&nbsp;
+        <input id = "button" type = "button" value = " Add " onclick = "AddData()">
+        <input id = "button" type = "button" value = " Update ">
+    </form>
+</div>
+
+<h3>List Of Persons</h3>
+<div id = "tab">
+        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Gender</td>
+                    <td>Age</td>
+                    <td>City</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+        </table>
+</div>
