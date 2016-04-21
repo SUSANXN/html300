@@ -1,6 +1,6 @@
 
 
-<script>
+
   
 function AddData() {
     var x = document.getElementById("age").value;
@@ -18,4 +18,10 @@ function AddData() {
         $(rows).appendTo("#list tbody");
     }
 }
-</script>
+
+//copied the below code from javascript class, not sure if it works
+window.onload = function()
+{
+	buildThumbnails();//use or "fire off" this function
+	//or invoke the function
+};

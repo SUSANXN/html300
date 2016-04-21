@@ -2,29 +2,72 @@
 <html>
 <head>
 
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
 <title>Week 2 Assignment</title>
+  <style>
+  tab {
+  background-color:aqua;</style>
   
-</head> 
-<body>
-<h1>Week 2 Assignment</h1>
+  </style>
+  <script>
+function AddData() {
+    var x = document.getElementById("age").value;
+    var y = document.getElementById("name").value;
+    var letters = '/^[a-zA-Z]+$/';
+    if ((parseInt(x) != (x)) && (y == parseInt(y))) {
+        alert("Wrong Value Entered");
+    } else {
+        var rows = "";
+        var name = "name";
+        var age = document.getElementById("age").value;
+        var city = document.getElementById("city").value;
 
-<form method="post" action="#"
-<table id="t01">
-  <tr>
-  <th>Username</th>
-  <th>
-  <input type="text" name="username"
-  </th>
-  </tr>
-  <tr> 
-  <th>Email Address</th> 
-  <th><input type="text" name="email"</th>
-  </tr> 
-  </table>
-  <p><input type="submit" value="submit"</p>
-  <p><input type="reset"  value="reset"</p>
-  </form>
+        rows += "<tr><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td></tr>";
+        $(rows).appendTo("#list tbody");
+    }
+}
+</script>
   
+  </head>    
+<body>
+
+<h3>List Of Persons</h3>
+<div id = "tab">
+  <input id = "button" type = "button" value = " Add " onclick = "AddData()">
+        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            </tbody>
+        </table>
+</div>
+  <div id = "data">
+    <form id = "person">    
+        <br><br>
+        Name: <input id = "name" name = "name" type = "text">
+        <br><br>
+        Age: <input id = "age" name = "age" type = "text">
+        <br><br>
+        City: <select id = "city" name = "city">
+                <option>Seattle</option>
+                <option>Bellevue</option>
+                <option>Renton</option>
+            </select>
+        <br><br>
+        
+      <input id="button" type = "button" value = " Reset ">
+        
+        
+        <input id = "button" type = "button" value = " Update ">
+    </form>
+</div>
+ 
+ <script src="javascript/assignment2.js" type="text/javascript"></script>
 
 </body>
+</html>
+ 
