@@ -4,7 +4,9 @@
 
 <meta charset="UTF-8">
 <title>Week 2 Assignment</title>
+  <script src="javascript/arrays.js" type="text/javascript"></script>
 <script>
+  
 function AddData() {
     var x = document.getElementById("age").value;
     var y = document.getElementById("name").value;
@@ -13,17 +15,16 @@ function AddData() {
         alert("Wrong Value Entered");
     } else {
         var rows = "";
-        var name = "sadcsad";
-        var gender = $('input[name="gender"]:checked').val();
+        var name = "name";
         var age = document.getElementById("age").value;
         var city = document.getElementById("city").value;
 
-        rows += "<tr><td>" + name + "</td><td>" + gender + "</td><td>" + age + "</td><td>" + city + "</td></tr>";
+        rows += "<tr><td>" + name + "</td><td>" + age + "</td><td>" + city + "</td></tr>";
         $(rows).appendTo("#list tbody");
     }
 }
 </script>
-
+  </head>    
 <body>
 <h2>Add/Update Person Form</h2>
 <div id = "data">
@@ -31,33 +32,30 @@ function AddData() {
         <br><br>
         Name: <input id = "name" name = "name" type = "text">
         <br><br>
-        Gender: <input name = "gender" type = "radio" value = "Male"> Male
-                <input name = "gender" type = "radio" value = "Female"> Female
+        Age: <input id = "age" name = "age" type = "text">
         <br><br>
-        Age: &nbsp;&nbsp;&nbsp; <input id = "age" name = "age" type = "text">
-        <br><br>
-        City: &nbsp;&nbsp;&nbsp;<select id = "city" name = "city">
-                <option>Lahore</option>
-                <option>Islamabad</option>
-                <option>Karachi</option>
+        City: <select id = "city" name = "city">
+                <option>Seattle</option>
+                <option>Bellevue</option>
+                <option>Renton</option>
             </select>
         <br><br>
-        <input id = "button" type = "button" value = " Reset " onclick = "ResetForm()">&nbsp;&nbsp;&nbsp;
+        
+      <input id="button" type = "button" value = " Reset ">
+        
         <input id = "button" type = "button" value = " Add " onclick = "AddData()">
         <input id = "button" type = "button" value = " Update ">
     </form>
 </div>
-
+<br><br>
 <h3>List Of Persons</h3>
 <div id = "tab">
         <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
             <thead>
                 <tr>
                     <td>Name</td>
-                    <td>Gender</td>
                     <td>Age</td>
                     <td>City</td>
-                    <td>Action</td>
                 </tr>
             </thead>
 
