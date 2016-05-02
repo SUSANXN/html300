@@ -1,0 +1,6 @@
+function go() {
+  alert('hi');
+  
+
+  
+  
