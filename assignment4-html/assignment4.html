@@ -2,13 +2,13 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Google Maps v3 API Example</title>
+        <title>Assignment 4 Example</title>
         <style>
             html, body, #map {
-                height: 100%;
-                width: 100%;
+                height: 85%;
+                width: 85%;
                 margin: 0;
-                padding: 0;
+                padding: 2rem;
             }
             div#footer {
                 position: fixed;
@@ -25,6 +25,29 @@
         </style> 
     </head>
     <body>
+      
+      
+  <body onLoad="writeLati(locform)">
+
+
+
+	<form name="locform" action="submit.php" method="post" >
+	Latitude: <input type="text" name="latitude" value=""/>
+	Longitude: <input type="text" name="longitude" value="" />
+	
+	<input type="submit"  />
+	</form> 
+
+
+
+    
+      
+<h2>Assignment 4:</h2>
+<p>Create a Web page with a map, either static or slippy, using the API of your choice.</p>
+
+<p>Create a little form that allows the user to choose the location and zoom level. This could be input boxes for entering latitude, longitude, and zoom. Or it could be a menu (select, radio buttons, or something similar) of places you find interesting.</p>
+
+<p>When the user chooses a location, change the map accordingly. If you are using a slippy map, there are built-in functions to do this. If a static map, build the new URL string and use jQuery's attr()function to set the src attribute.</p>
         <div id="map" style="float: left;"></div>
         
         <div id="footer">&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div>
