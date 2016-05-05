@@ -22,40 +22,40 @@
                 z-index: 2;
                 background: WHITE;
             }
+            body {
+	           background-color: bisque;
+	           font-family: Helvetica;
+	           font-size: 16px;
+}
         </style> 
     </head>
     <body>
       
       
-  <body onLoad="writeLati(locform)">
+  <!---<body onLoad="writeLati(locform)"> --> 
 
-
-
-	<form name="locform" action="submit.php" method="post" >
-	Latitude: <input type="text" name="latitude" value=""/>
-	Longitude: <input type="text" name="longitude" value="" />
-	
-	<input type="submit"  />
-	</form> 
-
-
-
-    
-      
 <h2>Assignment 4:</h2>
 <p>Create a Web page with a map, either static or slippy, using the API of your choice.</p>
 
 <p>Create a little form that allows the user to choose the location and zoom level. This could be input boxes for entering latitude, longitude, and zoom. Or it could be a menu (select, radio buttons, or something similar) of places you find interesting.</p>
 
-<p>When the user chooses a location, change the map accordingly. If you are using a slippy map, there are built-in functions to do this. If a static map, build the new URL string and use jQuery's attr()function to set the src attribute.</p>
-        <div id="map" style="float: left;"></div>
+<p>When the user chooses a location, change the map accordingly. If you are using a slippy map, there are built-in functions to do this. If a static map, build the new URL string and use jQuery's attr()function to set the src attribute.</p><br>
+      
+    <form name="locform" action="submit.php" method="post" >
+	Latitude: <input type="text" name="latitude" value=""/>
+	Longitude: <input type="text" name="longitude" value="" />
+	
+	<input type="submit"  />
+	</form>
+      
+    <div id="map" style="float: left;"></div>
         
-        <div id="footer">&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</div>
+    <div id="footer">&copy; Susan Nguyen and <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div>
         
         <!-- bring in the google maps library -->
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         
-        <script type="text/javascript">
+    <script type="text/javascript">
             //Google maps API initialisation
             var element = document.getElementById("map");
  
