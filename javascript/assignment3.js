@@ -7,7 +7,6 @@
 
 (function() {
 'use strict';
-//=============================================================================
 
 var count = 0;
 var sum = 0;
@@ -21,7 +20,6 @@ $('#submit').on( 'click', processForm );
 $('#reset').on( 'click', reset );
 $('#user-input').on( 'focus', clearInput );
 
-//=============================================================================
 
 function processForm( evt ) {
     var val = $('#user-input').val();
@@ -34,7 +32,7 @@ function processForm( evt ) {
     evt.preventDefault( );
 }
 
-//=============================================================================
+
 
 function processString( string ) {
     concatenatedString += string;
@@ -42,7 +40,7 @@ function processString( string ) {
     DisplayResults( );
 }
 
-//=============================================================================
+
 
 function updateWordCounts( string ) {
     var words = string.split( /\s/ ); //split on whitespace (Could use ' ')
@@ -60,7 +58,7 @@ function updateWordCounts( string ) {
     } );
 }
 
-//=============================================================================
+
 
 function processNumber( number ) {
     ++count;
@@ -73,7 +71,6 @@ function processNumber( number ) {
     DisplayResults( );
 }
 
-//=============================================================================
 
 function DisplayResults( ) {
     displayValue( '#count', count );
@@ -82,7 +79,7 @@ function DisplayResults( ) {
     displayValue( '#concatenation', concatenatedString );
     displayWordCounts( );
 
-    //-------------------------------------------------------------------------
+
 
     function displayValue( selector, value ) {
         if ( value === undefined ) {
@@ -93,7 +90,7 @@ function DisplayResults( ) {
     }
 }
 
-//=============================================================================
+
 
 function displayWordCounts( ) {
     var words = Object.keys( wordCounts );
@@ -120,7 +117,7 @@ function displayWordCounts( ) {
     } );
 }
 
-//=============================================================================
+
 
 function reset( ) {
     count = 0;
@@ -131,11 +128,10 @@ function reset( ) {
     DisplayResults( );
 }
 
-//=============================================================================
 
 function clearInput( ) {
     $('#user-input').val( '' );
 }
 
-//=============================================================================
+
 })();

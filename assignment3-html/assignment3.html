@@ -2,36 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-     <SCRIPT language=Javascript>
-       <!--
-       function isNumberKey(evt)
-       {
-          var charCode = (evt.which) ? evt.which : evt.keyCode;
-          if (charCode != 46 && charCode > 31 
-            && (charCode < 48 || charCode > 57))
-             return false;
 
-          return true;
-       }
-       //-->
-       
-  var textarea = document.querySelector("textarea");
-  textarea.addEventListener("keydown", function(event) {
-    // The key code for F2 happens to be 113
-    if (event.keyCode == 113) {
-      replaceSelection(textarea, "Khasekhemwy");
-      event.preventDefault();
-    }
-  });
-  function replaceSelection(field, word) {
-    var from = field.selectionStart, to = field.selectionEnd;
-    field.value = field.value.slice(0, from) + word +
-                  field.value.slice(to);
-    // Put the cursor after the word
-    field.selectionStart = field.selectionEnd =
-      from + word.length;
-  }
-</script>
   
     <title>Assignment 3 </title>
   </head>
@@ -83,9 +54,38 @@ Optional feature: Determine, update, and display the frequency of words entered 
     </table>
 <h3>The Strings</h3>
 <br><br>
-<script src="../../../lib/jquery-2.js"></script>
-    <script src="ArrayStats.js"></script>
+<script src="/javascript/jquery-2.2.3.min.js"></script>
+    <script src="/javascript/arraystats.js"></script>
+     <SCRIPT language=Javascript>
+       <!--
+       function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : evt.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
 
+          return true;
+       }
+       //-->
+       
+  var textarea = document.querySelector("textarea");
+  textarea.addEventListener("keydown", function(event) {
+    // The key code for F2 happens to be 113
+    if (event.keyCode == 113) {
+      replaceSelection(textarea, "Khasekhemwy");
+      event.preventDefault();
+    }
+  });
+  function replaceSelection(field, word) {
+    var from = field.selectionStart, to = field.selectionEnd;
+    field.value = field.value.slice(0, from) + word +
+                  field.value.slice(to);
+    // Put the cursor after the word
+    field.selectionStart = field.selectionEnd =
+      from + word.length;
+  }
+</script>
   </body>
 </html>
 <footer>
