@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 5 </title>
+        <style>
+            html, body, #map {
+                height: 85%;
+                width: 85%;
+                margin: 0;
+                padding: 2rem;
+            }
+            div#footer {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 18px;
+                margin: 0;
+                padding: 6px;
+                z-index: 2;
+                background: WHITE;
+            }
+            body {
+	           background-color: bisque;
+	           font-family: Helvetica;
+	           font-size: 16px;
+}
+        </style> 
+    </head>
+  <body>
+  <h1>Assignment 5 : Input drop and drag</h1>
+  <h2>Instructions </h2>
+
+<p>This week you have a choice: reading and displaying values from various inputs, or moving elements around with a mouse (drag and drop).</p>
+
+  <p><strong>Inputs </strong></p>
+<p>Make a table for different kinds of input elements. (This includes not just input elements per se, but also textarea and select.) In the first column, show type of input (e.g. 'input type="checkbox"'). In the second column, put an actual element of that type. The third column is for the values entered by the user.</p>
+
+<p>Your JavaScript should read and display the initial value for each input, and then handle the change event for the inputs by displaying the new value. For most inputs, you can use jQuery'sval() method. An exception is checkboxes, for which you can use jQuery's prop() method.</p>
+
+<p>Here's what the table might look like with just the basic inputs: </p>
+ 
+<p>Consider expanding the table to include most of the input types HTML5 offers, including select with the multiple attribute. (Certain input types, such as buttons, don't really have values, so don't bother with those.)</p>
+
+      <form id="form1">
+    <b>Name:</b> <input name="name" type="text" size="20"> 
+  </form><br>
+  <button onclick="outputnames() ">Submit</button>
+  <button onclick="reset">Reset</button>
+    <p id="demo"></p>  
+    
+    
+    <input type="text" id="text">
+    <input type="button" id="button" name="click"> 
+    <div id="feedback"></div>
+    
+<p><strong><s>Drag and Drop</strong></p>
+  <p>Make a page where the user can drag a couple of elements around with a mouse.</p>
+
+<p>Make a large div (with relative position) and put some smaller elements (with absolute position) inside of it.</p>
+
+<p>Set a handler for the mousedown event on those draggable elements. It should have a variable that holds the event target (the element that was clicked on). It should also get the difference between the position of that element (its left and top CSS settings) and the mouse (the event's pageX and pageY in jQuery).</p>
+
+<p>That event handler should then set event handlers for two other events: A mousemove handler should update the element's position so that the difference between that and the mouse's new position stays constant. A mouseup handler should remove those two event handlers so dragging finishes. (With jQuery, use the off method.) These handlers should be set on the entiredocument, rather than the target element.</p>
+
+<p> Optional features: Confine the dragged elements to remain inside the outer div. Set the cursor for the draggle elements appropriately (e.g. grab).</p></s>
+  <script src="/javascript/jquery-2.2.3.min.js"></script>
+    <script type="javascript/assignment5.js" src="assignment5.js">    </script>
+    
+  <script>
+   function outputnames()
+    { var x,y,name,a,b,answer; 
+      x=document.getElementById("form1"); 
+      y=x.elements("name").value; 
+      document.getElementById("demo").innerHTML="Hello  "+y+"<br>"; 
+      document.getElementById("demo").innerHTML+= y + " is a very good tutor! <br>"; 
+    }
+  
+  
+</script>
+  </body>
+</html>
