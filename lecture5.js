@@ -84,3 +84,18 @@ string.search()
 string.replace()
 string.match()
 
+// ------- Coercions -------careful because JS will silently convert a value of one type to the type it is expecting. Can be convenient, but can assume values. 
+
+// falsy and truthy 
+
+function checkIfTruthy( x ) {
+  if ( x ) {
+    console.log( 'truthy' ); 
+  } else {
+    console.log( 'falsy' ); 
+  }
+}
+
+// empty strings are falsy 
+
+

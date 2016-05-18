@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html> 
+    <head>
+        <meta charset="utf-8" />
+        <title>Assignment 5 </title>
+        <style>
+            html, body, #map {
+                height: 85%;
+                width: 85%;
+                margin: 0;
+                padding: 2rem;
+            }
+            div#footer {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 18px;
+                margin: 0;
+                padding: 6px;
+                z-index: 2;
+                background: WHITE;
+            }
+            body {
+	           background-color: bisque;
+	           font-family: Helvetica;
+	           font-size: 12px;
+}
+        </style> 
+    </head>
+  
+  <body> 
+    <h1>Lecture 6 notes</h1>
+    
+<h2>Homework 5 overview:</h2>    
+<p>Framework Resource: 
+  <li>Underscore</li>
+  <li>Lowdash libraries</li>
+  <li>Angular, robust framework </li>
+  <li>Backbone</li></p>
+    
+    <p>
+RGBA or RGB good for backround color, more readable<br>
+Evt. jquery to fire off event<br>
+Drag and drop notes: 
+    </p>
+    
+    <h2>Topic: Client-server communication:</h2>
+    <p>
+      Overview: HTTP, the client (browser) sends a request and the server sends a response<br>
+Practice by goingto: Browser (client)  --> Development tool --> network --> <br>
+Browser (client) = request <br>
+
+Request has: URL, method, headers, data <br> 
+      
+<b>Header:</b>Deeper into web development, headers involved with security, large file, browsers will decompress. 
+<b>URL:</b> universal resource locator<br>
+    name of page, image or record from data base<br>
+      <b>Methods:</b> HTTP supports many, most comment is "get". "Get" something from the server, request data from server.<br>
+    Post: Post request, url but also have other things, sends data to service<br>
+    Put: exisiting resource and updating it, in place of that resrouce<br>
+      Delete:which request that the resource be deleted<br> 
+      <b>Data:</b> 
+                                                        <br> Server = response. <br>
+      <b>Status Code: </b> normally 200 = success<br>
+      <b>Headers:</b> meta-data about the response <br>
+      <b>Data:</b> A successful response generally returns, as data, a representation of the requested resource or something similar. If an error occurred, the data may provide more details about what went wrong.<br>
+      
+      <h2>AJAX, web 2.0</h2><p> Allows you to get data without refresh page, or do full request. Continue update, refresh without reload <br>
+    example of object: client side function 
+    
+    { 
+      method: 'GET', 
+      data: { skip: 1, 
+              limit: 2 
+    },
+    success: function logListResult( data ) {
+    console.log( 'Data received:', data ); 
+    }, 
+    error: logAjaxError
+    });
+    
+    function logAjaxError( jqXHR, textStatus errorThrown ); 
+    }
+    
+    </p>
+    <h2>CRUD</h2>
+    Database, collection of items. Websites that deal with data, facebook/gmail/inventory for store/twitter, there's a database with a collection of data. interrelated somehow, lives in server side. Ways of collecting and organizing, arrays of ojects. SQL, call collections tables, items are called records, columns are field/propertyof records. Different database, different terminology. 
+    
+    Crud: summarize the four basic operations on a database. These operations are: 
+    Create<br>Read<br>Update<br>Delete<br>
+    
+    <br>
+    REST: stands for representation state transfer: the way the web works, academic thesis outline, theoritical outline of HTTP, articect of world wide web. Why there are particular methods and best way to use them would be. Impossible to right website that's not restfull. HTTP, you have to use these methods. <br>
+    Map CRUD operation to the methods. 
+    Creating: post, URI: collection
+    Reading: get, URL: collection or elements
+    Updating: put, URI: element
+    Delete: delete, URI: element
+    
+    </p>
+    
+    
+    
+    
+    
+    
+    
+    
+<br>
+    <footer> &copy;Susan Nguyen, May 12, 2016 </footer>
+  </body>  
+</html>
